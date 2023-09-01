@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "107505224400",
+    "project_id": "metaratus-app",
+    "storage_bucket": "metaratus-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107505224400:android:dce98345c132789554acd5",
+        "android_client_info": {
+          "package_name": "com.kyptronix.metaratus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107505224400-dre9caral0brltvk5cv8ehk077tapq6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhCl1rQH3T1VpjSHVDivFmAtwXtVBWlc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107505224400-dre9caral0brltvk5cv8ehk077tapq6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
