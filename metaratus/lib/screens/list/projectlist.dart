@@ -135,7 +135,7 @@ class _MyProjectListState extends State<MyProjectList> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue.shade100,
+          backgroundColor: Colors.amber.shade100,
           centerTitle: true,
           title: const Text(
             'Project List',

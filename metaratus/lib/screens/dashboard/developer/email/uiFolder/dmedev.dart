@@ -43,7 +43,7 @@ class _DmeDevState extends State<DmeDev> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.blue.shade100,
+              Colors.amber.shade100,
               Colors.white,
             ],
             begin: Alignment.topLeft,
@@ -197,30 +197,30 @@ class _DmeDevState extends State<DmeDev> {
               ),
 
               MyDevEmailTextfield(controller: sendTo, hintText: ''),
-              Row(
-                children: [
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStatePropertyAll(Colors.grey.shade300),
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        sendTo.text = 'sourav.kyptronix@gmail.com';
-                      });
-                    },
-                    child: const Text(
-                      'Sourav Sinha',
-                      style: TextStyle(
-                        fontFamily: 'fontThree',
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              // Row(
+              //   children: [
+              //     ElevatedButton(
+              //       style: ButtonStyle(
+              //         backgroundColor:
+              //             MaterialStatePropertyAll(Colors.grey.shade300),
+              //       ),
+              //       onPressed: () {
+              //         setState(() {
+              //           sendTo.text = 'sourav.kyptronix@gmail.com';
+              //         });
+              //       },
+              //       child: const Text(
+              //         'Sourav Sinha',
+              //         style: TextStyle(
+              //           fontFamily: 'fontThree',
+              //           fontSize: 14,
+              //           fontWeight: FontWeight.bold,
+              //           color: Colors.black87,
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
 
               // cc to
               const Align(
@@ -228,30 +228,30 @@ class _DmeDevState extends State<DmeDev> {
                 child: Text('Cc'),
               ),
               MyDevEmailTextfield(controller: ccTo, hintText: ''),
-              Row(
-                children: [
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStatePropertyAll(Colors.grey.shade300),
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        ccTo.text = 'kyptronix@gmail.com';
-                      });
-                    },
-                    child: const Text(
-                      'Kyptronix LLP',
-                      style: TextStyle(
-                        fontFamily: 'fontThree',
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              // Row(
+              //   children: [
+              //     ElevatedButton(
+              //       style: ButtonStyle(
+              //         backgroundColor:
+              //             MaterialStatePropertyAll(Colors.grey.shade300),
+              //       ),
+              //       onPressed: () {
+              //         setState(() {
+              //           ccTo.text = 'kyptronix@gmail.com';
+              //         });
+              //       },
+              //       child: const Text(
+              //         'Kyptronix LLP',
+              //         style: TextStyle(
+              //           fontFamily: 'fontThree',
+              //           fontSize: 14,
+              //           fontWeight: FontWeight.bold,
+              //           color: Colors.black87,
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
 
               SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               SizedBox(
@@ -260,7 +260,7 @@ class _DmeDevState extends State<DmeDev> {
                 child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStatePropertyAll(Colors.blue.shade400),
+                        MaterialStatePropertyAll(Colors.amber.shade400),
                   ),
                   onPressed: () {
                     if (sendTo.text != '' && ccTo.text != '') {
@@ -322,7 +322,7 @@ class _DmeDevState extends State<DmeDev> {
                     style: TextStyle(
                       fontFamily: 'fontThree',
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ),

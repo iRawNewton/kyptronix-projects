@@ -177,11 +177,12 @@ class _MyAdminLoginState extends State<MyAdminLogin> {
                                             color: Colors.red,
                                           ),
                                         );
-                                      });
+                                      },
+                                    );
                             },
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(
-                                  Colors.blue.shade200),
+                            style: const ButtonStyle(
+                              backgroundColor:
+                                  MaterialStatePropertyAll(Color(0xffffd6a0)),
                             ),
                             child: const Text(
                               'Login',

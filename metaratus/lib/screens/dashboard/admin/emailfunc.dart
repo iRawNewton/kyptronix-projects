@@ -6,13 +6,13 @@ import 'package:mailer/smtp_server.dart';
 Future<void> sendEmailAdmin(
     context, toText, ccText, bccText, subject, body) async {
   try {
-    var userEmail = 'kyptronix@gmail.com';
+    var userEmail = 'metaratus5@gmail.com';
     var message = Message();
     message.subject = subject.text;
     // summary
     message.html = body.text;
 
-    message.from = Address(userEmail.toString(), 'Souvik Karmakar');
+    message.from = Address(userEmail.toString(), 'Metaratus');
 
     // receipents
     List<String> emails = toText.text.split(',');
@@ -42,7 +42,7 @@ Future<void> sendEmailAdmin(
       message.bccRecipients = bccRecipient;
     }
 
-    var smtpServer = gmail(userEmail, 'cnasttaokkyfzsug');
+    var smtpServer = gmail(userEmail, 'hbubiuxnkyaemrcz');
     send(message, smtpServer).then(
       (value) => ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

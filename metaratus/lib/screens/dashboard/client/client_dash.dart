@@ -352,7 +352,7 @@ class _MyClientDashboardState extends State<MyClientDashboard> {
                 TextStyle(fontFamily: 'fontOne', fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
-          backgroundColor: Colors.blue.shade100,
+          backgroundColor: Colors.amber.shade100,
           leading: Builder(
             builder: (context) => IconButton(
               icon: const Icon(Icons.menu_rounded),
@@ -400,7 +400,7 @@ class _MyClientDashboardState extends State<MyClientDashboard> {
                         gradient: LinearGradient(
                           colors: [
                             Colors.white,
-                            Colors.lightBlue.shade100,
+                            Colors.amber.shade100,
                           ],
                           begin: Alignment.bottomCenter,
                           end: Alignment.topLeft,
@@ -460,7 +460,7 @@ class _MyClientDashboardState extends State<MyClientDashboard> {
                                 height:
                                     MediaQuery.of(context).size.height * 0.15,
                                 decoration: BoxDecoration(
-                                    color: const Color.fromARGB(255, 1, 55, 99),
+                                    color: Colors.green.shade800,
                                     border: Border.all(
                                         width: 2, color: Colors.transparent),
                                     borderRadius: BorderRadius.circular(10.0)),
@@ -1307,29 +1307,30 @@ class _MyClientDashboardState extends State<MyClientDashboard> {
                     width: MediaQuery.of(context).size.width * 0.4,
                     child:
                         LottieBuilder.asset('assets/animations/loading.json'))),
-        floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.blue.shade50,
-            onPressed: () async {
-              SharedPreferences prefs = await SharedPreferences.getInstance();
-              String? clientID = prefs.getString('cliId');
-              String cliID = clientID.toString();
+        // floatingActionButton: FloatingActionButton(
+        //   backgroundColor: Colors.blue.shade50,
+        //   onPressed: () async {
+        //     SharedPreferences prefs = await SharedPreferences.getInstance();
+        //     String? clientID = prefs.getString('cliId');
+        //     String cliID = clientID.toString();
 
-              hello() {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        MyClientChatList(clientIdForChat: cliID),
-                  ),
-                );
-              }
+        //     hello() {
+        //       Navigator.push(
+        //         context,
+        //         MaterialPageRoute(
+        //           builder: (context) =>
+        //               MyClientChatList(clientIdForChat: cliID),
+        //         ),
+        //       );
+        //     }
 
-              hello();
-            },
-            child: Icon(
-              Icons.chat_bubble_outline,
-              color: Colors.blue.shade400,
-            )),
+        //     hello();
+        //   },
+        //   child: Icon(
+        //     Icons.chat_bubble_outline,
+        //     color: Colors.blue.shade400,
+        //   ),
+        // ),
         drawer: const MyClientDrawyer(),
       ),
     );

@@ -49,14 +49,14 @@ class _MyAdminEmailState extends State<MyAdminEmail> {
   Future<void> sendEmailAdminPm(
       context, toText, ccText, bccText, subject, body) async {
     try {
-      var userEmail = 'kyptronix@gmail.com';
+      var userEmail = 'metaratus5@gmail.com';
       var message = Message();
       message.subject = subject.text;
       // summary
       message.html = body.text;
 
       // message.html = 'This is test body';
-      message.from = Address(userEmail.toString(), 'Souvik Karmakar');
+      message.from = Address(userEmail.toString(), 'Metaratus');
 
       // receipents
       List<String> emails = toText.text.split(',');
@@ -86,7 +86,7 @@ class _MyAdminEmailState extends State<MyAdminEmail> {
         message.bccRecipients = bccRecipient;
       }
 
-      var smtpServer = gmail(userEmail, 'cnasttaokkyfzsug');
+      var smtpServer = gmail(userEmail, 'hbubiuxnkyaemrcz');
       send(message, smtpServer).then((value) {
         Navigator.pop(context);
         ScaffoldMessenger.of(context).showSnackBar(

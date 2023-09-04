@@ -116,7 +116,7 @@ class _DailyTaskDevListState extends State<DailyTaskDevList> {
                                       child: ListTile(
                                         leading: const Icon(Icons.person),
                                         iconColor: Colors.black,
-                                        tileColor: Colors.amber,
+                                        tileColor: Colors.amber.shade400,
                                         title: Text(
                                           data[index]['cli_name'].toString(),
                                         ),

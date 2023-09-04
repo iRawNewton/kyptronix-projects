@@ -161,9 +161,9 @@ class _MyClientLoginState extends State<MyClientLogin> {
                           'Login to continue',
                           style: TextStyle(
                             fontFamily: 'fontOne',
-                            fontSize: 24,
+                            fontSize: 18.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.blue,
+                            color: Colors.black54,
                           ),
                         ),
                       ),
@@ -249,7 +249,7 @@ class _MyClientLoginState extends State<MyClientLogin> {
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStatePropertyAll(
-                                  Colors.blue.shade200)),
+                                  Colors.amber.shade200)),
                           child: const Text(
                             'Login',
                             style: TextStyle(

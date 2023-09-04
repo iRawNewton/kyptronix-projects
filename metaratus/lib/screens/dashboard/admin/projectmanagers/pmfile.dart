@@ -44,7 +44,7 @@ class _MyPmListState extends State<MyPmList> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Colors.blue.shade50,
+        backgroundColor: Colors.amber.shade50,
         centerTitle: true,
       ),
       body: Container(
@@ -52,8 +52,8 @@ class _MyPmListState extends State<MyPmList> {
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: [
-            Colors.blue.shade50,
-            Colors.blue.shade100,
+            Colors.amber.shade50,
+            Colors.amber.shade100,
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
         child: Column(
@@ -93,20 +93,23 @@ class _MyPmListState extends State<MyPmList> {
                               child: Container(
                                 // color: Colors.blue.shade600,
                                 decoration: BoxDecoration(
-                                    color: Colors.blue,
+                                    color: Colors.amber.shade300,
                                     borderRadius: BorderRadius.circular(10)),
                                 child: ListTile(
                                   leading: const Icon(Icons.person),
-                                  iconColor: Colors.white,
+                                  iconColor: Colors.black,
                                   tileColor: Colors.amber,
                                   title: Text(
                                     data[index]['cli_name'].toString(),
-                                    style: const TextStyle(color: Colors.white),
+                                    style: const TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                   subtitle: Text(
                                     data[index]['cli_phone'].toString(),
                                     style: const TextStyle(
-                                      color: Colors.white60,
+                                      color: Colors.black87,
                                     ),
                                   ),
                                 ),
@@ -124,9 +127,14 @@ class _MyPmListState extends State<MyPmList> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const MyNewPm()));
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const MyNewPm(),
+            ),
+          );
         },
         child: const Icon(
           Icons.add,

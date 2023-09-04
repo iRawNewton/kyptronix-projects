@@ -23,14 +23,23 @@ class _MyDrawerInfoState extends State<MyDrawerInfo> {
       child: ListView(
         // padding: const EdgeInsets.all(8.0),
         children: [
-          const DrawerHeader(
+          DrawerHeader(
             child: UserAccountsDrawerHeader(
-              accountName: Text(
+              decoration: BoxDecoration(color: Colors.red.shade100),
+              accountName: const Text(
                 'Metaratus',
-                style: TextStyle(fontFamily: 'fontOne'),
+                style: TextStyle(
+                    fontFamily: 'fontOne',
+                    color: Colors.black87,
+                    fontSize: 18.0),
               ),
-              accountEmail: Text('Manager Account',
-                  style: TextStyle(fontFamily: 'fontTwo')),
+              accountEmail: const Text(
+                'Manager Account',
+                style: TextStyle(
+                    fontFamily: 'fontTwo',
+                    color: Colors.black87,
+                    fontSize: 14.0),
+              ),
             ),
           ),
           ListTile(
@@ -116,19 +125,19 @@ class _MyDrawerInfoState extends State<MyDrawerInfo> {
               );
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.mail_outline_rounded),
-            title:
-                const Text('E-mail', style: TextStyle(fontFamily: 'fontTwo')),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const MyAdminEmail(),
-                ),
-              );
-            },
-          ),
+          // ListTile(
+          //   leading: const Icon(Icons.mail_outline_rounded),
+          //   title:
+          //       const Text('E-mail', style: TextStyle(fontFamily: 'fontTwo')),
+          //   onTap: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) => const MyAdminEmail(),
+          //       ),
+          //     );
+          //   },
+          // ),
           ListTile(
             leading: const Icon(Icons.logout_rounded),
             title:

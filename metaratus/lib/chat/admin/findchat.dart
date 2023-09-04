@@ -127,7 +127,7 @@ class MyAdminChatFindState extends State<MyAdminChatFind> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade100,
+        backgroundColor: Colors.blue.shade50,
         centerTitle: true,
         title: const Text(
           'Chats',
@@ -226,8 +226,10 @@ class MyAdminChatFindState extends State<MyAdminChatFind> {
                     width: MediaQuery.of(context).size.width * 0.5,
                     child: ElevatedButton(
                         style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStatePropertyAll(Colors.blue.shade400)),
+                          backgroundColor: MaterialStatePropertyAll(
+                            Colors.amber.shade800,
+                          ),
+                        ),
                         onPressed: () {
                           getEmailID(projectPmID.text);
                           // print(emailid);

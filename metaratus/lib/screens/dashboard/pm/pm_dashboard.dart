@@ -430,7 +430,7 @@ class _MyPmDashboardState extends State<MyPmDashboard> {
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.blue.shade100,
+            backgroundColor: Colors.red.shade50,
             title: const Text(
               'Home',
               style: TextStyle(
@@ -927,6 +927,11 @@ class _MyPmDashboardState extends State<MyPmDashboard> {
                               SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.25,
                                 child: ElevatedButton(
+                                    style: const ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                        Colors.green,
+                                      ),
+                                    ),
                                     onPressed: () {
                                       setState(() {
                                         isNotLoading = false;
@@ -936,7 +941,7 @@ class _MyPmDashboardState extends State<MyPmDashboard> {
                                     },
                                     child: const Text(
                                       'Search',
-                                      style: TextStyle(color: Colors.black87),
+                                      style: TextStyle(color: Colors.white),
                                     )),
                               )
                             ],
@@ -1502,17 +1507,17 @@ class _MyPmDashboardState extends State<MyPmDashboard> {
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: LottieBuilder.asset(
                           'assets/animations/loading.json'))),
-          floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.blue.shade100,
-            onPressed: () async {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const MyChatList()));
-            },
-            child: const Icon(
-              Icons.chat_bubble,
-              color: Colors.black,
-            ),
-          ),
+          // floatingActionButton: FloatingActionButton(
+          //   backgroundColor: Colors.red.shade100,
+          //   onPressed: () async {
+          //     Navigator.push(context,
+          //         MaterialPageRoute(builder: (context) => const MyChatList()));
+          //   },
+          //   child: const Icon(
+          //     Icons.chat_bubble,
+          //     color: Colors.black,
+          //   ),
+          // ),
           drawer: const MyDrawerInfo()),
     );
   }

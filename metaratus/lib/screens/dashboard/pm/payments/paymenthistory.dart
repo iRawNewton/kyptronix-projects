@@ -158,7 +158,7 @@ class _ViewDailyPaymentState extends State<ViewDailyPayment> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade100,
+        backgroundColor: Colors.amber.shade50,
         title: const Text(
           'Daily Payment',
           style: TextStyle(
@@ -172,11 +172,11 @@ class _ViewDailyPaymentState extends State<ViewDailyPayment> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.blue.shade50,
-              Colors.lightBlue.shade100,
+              Colors.amber.shade100,
+              Colors.amber.shade50,
             ],
             begin: Alignment.bottomCenter,
-            end: Alignment.topRight,
+            end: Alignment.topCenter,
           ),
         ),
         child: Column(
@@ -243,7 +243,7 @@ class _ViewDailyPaymentState extends State<ViewDailyPayment> {
                                             ],
                                           ),
                                           child: Card(
-                                            color: Colors.blue.shade200,
+                                            color: Colors.amber.shade200,
                                             elevation: 0,
                                             shape: RoundedRectangleBorder(
                                               borderRadius:

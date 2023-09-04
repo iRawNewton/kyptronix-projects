@@ -151,9 +151,9 @@ class _MyPmLoginState extends State<MyPmLogin> {
                           'Login to continue',
                           style: TextStyle(
                             fontFamily: 'fontOne',
-                            fontSize: 24,
+                            fontSize: 18.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.blue,
+                            color: Colors.black54,
                           ),
                         ),
                       ),
@@ -237,7 +237,7 @@ class _MyPmLoginState extends State<MyPmLogin> {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStatePropertyAll(Colors.blue.shade200),
+                                MaterialStatePropertyAll(Colors.amber.shade200),
                           ),
                           child: const Text(
                             'Login',

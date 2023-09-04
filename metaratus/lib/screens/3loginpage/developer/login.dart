@@ -145,7 +145,7 @@ class _MyDevLoginState extends State<MyDevLogin> {
                           'Welcome Developer',
                           style: TextStyle(
                               fontFamily: 'fontOne',
-                              fontSize: 28,
+                              fontSize: 28.0,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -157,9 +157,9 @@ class _MyDevLoginState extends State<MyDevLogin> {
                           'Login to continue',
                           style: TextStyle(
                               fontFamily: 'fontOne',
-                              fontSize: 24,
+                              fontSize: 18.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.blue),
+                              color: Colors.black54),
                         ),
                       ),
 
@@ -248,7 +248,7 @@ class _MyDevLoginState extends State<MyDevLogin> {
                             },
                             style: ButtonStyle(
                                 backgroundColor: MaterialStatePropertyAll(
-                                    Colors.blue.shade200)),
+                                    Colors.amber.shade200)),
                             child: const Text(
                               'Login',
                               style: TextStyle(

@@ -219,7 +219,7 @@ class _MyDevDashboardState extends State<MyDevDashboard> {
     return Scaffold(
       extendBodyBehindAppBar: false,
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade50,
+        backgroundColor: Colors.amber.shade50,
         title: const Text(
           'Dashboard',
           style: TextStyle(
@@ -289,7 +289,7 @@ class _MyDevDashboardState extends State<MyDevDashboard> {
           height: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           decoration: BoxDecoration(
-            color: Colors.blue.shade50,
+            color: Colors.amber.shade50,
           ),
           child: loadingIndicator
               ? SingleChildScrollView(
@@ -490,9 +490,9 @@ class _MyDevDashboardState extends State<MyDevDashboard> {
                             });
                             postData(context);
                           },
-                          style: const ButtonStyle(
-                              backgroundColor:
-                                  MaterialStatePropertyAll(Colors.indigo)),
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                  Colors.green.shade800)),
                           child: const Text(
                             'Modify',
                             style: TextStyle(color: Colors.white, fontSize: 18),
@@ -509,28 +509,28 @@ class _MyDevDashboardState extends State<MyDevDashboard> {
                       child: LottieBuilder.asset(
                           'assets/animations/loading.json')),
                 )),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue.shade100,
-        onPressed: () {
-          setState(() {
-            chatLoader = true;
-          });
-          getEmailId(context);
-          Future.delayed(const Duration(seconds: 5), () {
-            setState(() {
-              chatLoader = false;
-            });
-          });
-        },
-        child: chatLoader
-            ? JumpingDots(
-                color: Colors.black,
-                radius: 5,
-                numberOfDots: 3,
-                animationDuration: const Duration(milliseconds: 400),
-              )
-            : const Icon(Icons.chat_bubble_outline_rounded),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   backgroundColor: Colors.blue.shade100,
+      //   onPressed: () {
+      //     setState(() {
+      //       chatLoader = true;
+      //     });
+      //     getEmailId(context);
+      //     Future.delayed(const Duration(seconds: 5), () {
+      //       setState(() {
+      //         chatLoader = false;
+      //       });
+      //     });
+      //   },
+      //   child: chatLoader
+      //       ? JumpingDots(
+      //           color: Colors.black,
+      //           radius: 5,
+      //           numberOfDots: 3,
+      //           animationDuration: const Duration(milliseconds: 400),
+      //         )
+      //       : const Icon(Icons.chat_bubble_outline_rounded),
+      // ),
     );
   }
 }

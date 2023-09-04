@@ -85,14 +85,17 @@ class _MyPmProfileState extends State<MyPmProfile> {
             ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.blue.shade50,
+          backgroundColor: Colors.amber.shade50,
         ),
         body: Container(
           width: x,
           height: y,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.blue.shade50, Colors.blue.shade200],
+              colors: [
+                Colors.amber.shade50,
+                Colors.amber.shade200,
+              ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
@@ -114,9 +117,9 @@ class _MyPmProfileState extends State<MyPmProfile> {
                         ),
                         SelectableText(
                           '${data[0]['pm_email']}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontFamily: 'fontTwo',
-                            fontSize: x * 0.05,
+                            fontSize: 14.0,
                             fontWeight: FontWeight.bold,
                             color: Colors.grey,
                           ),
@@ -166,7 +169,7 @@ class _MyPmProfileState extends State<MyPmProfile> {
                                   icon: Icons.access_time_outlined,
                                   number: '${data[0]['pending']}',
                                   text: 'Pending',
-                                  color: Colors.grey,
+                                  color: Colors.grey.shade800,
                                 ),
                               ),
                               InkWell(
@@ -184,7 +187,7 @@ class _MyPmProfileState extends State<MyPmProfile> {
                                   icon: Icons.refresh_outlined,
                                   number: '${data[0]['ongoing']}',
                                   text: 'Ongoing',
-                                  color: Colors.orange,
+                                  color: Colors.orange.shade700,
                                 ),
                               ),
                               InkWell(
@@ -202,7 +205,7 @@ class _MyPmProfileState extends State<MyPmProfile> {
                                   icon: Icons.check_circle_outline_outlined,
                                   number: '${data[0]['complete']}',
                                   text: 'Complete',
-                                  color: Colors.green,
+                                  color: Colors.green.shade700,
                                 ),
                               ),
                               InkWell(
@@ -263,7 +266,7 @@ class _MyPmProfileState extends State<MyPmProfile> {
                                   number:
                                       '\$${dataFinance[0]['current_month']}',
                                   text: 'Current Month',
-                                  color: Colors.blue.shade900,
+                                  color: Colors.lightBlue.shade800,
                                 ),
                               ),
                               InkWell(
@@ -282,7 +285,7 @@ class _MyPmProfileState extends State<MyPmProfile> {
                                   number:
                                       '${dataFinance[0]['total_amount_paid']}',
                                   text: 'Total',
-                                  color: Colors.green.shade900,
+                                  color: Colors.lightGreen.shade800,
                                 ),
                               ),
                             ],

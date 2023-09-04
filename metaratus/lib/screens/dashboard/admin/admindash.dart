@@ -137,7 +137,7 @@ class _MyAdminDashState extends State<MyAdminDash> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue.shade200,
+          backgroundColor: Colors.blue.shade50,
           centerTitle: true,
           title: const Text(
             'Admin Dashboard',

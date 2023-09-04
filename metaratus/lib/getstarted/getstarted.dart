@@ -73,12 +73,12 @@ class _MyAppGetStartedState extends State<MyAppGetStarted> {
                         style: ButtonStyle(
                             elevation: const MaterialStatePropertyAll(5),
                             backgroundColor:
-                                MaterialStatePropertyAll(Colors.blue.shade50)),
+                                MaterialStatePropertyAll(Colors.amber.shade50)),
                         onPressed: () async {
                           final prefs = await SharedPreferences.getInstance();
                           prefs.setBool('showGetStarted', false);
                           goTo() {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => const MyUsers(),

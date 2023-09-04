@@ -70,7 +70,7 @@ class _MyDevEmailScreenState extends State<MyDevEmailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade50,
+        backgroundColor: Colors.amber.shade50,
         centerTitle: true,
         title: const Text(
           'Email',
@@ -89,7 +89,7 @@ class _MyDevEmailScreenState extends State<MyDevEmailScreen> {
           gradient: LinearGradient(
             colors: [
               Colors.white,
-              Colors.lightBlue.shade50,
+              Colors.amber.shade50,
             ],
             begin: Alignment.bottomCenter,
             end: Alignment.topRight,

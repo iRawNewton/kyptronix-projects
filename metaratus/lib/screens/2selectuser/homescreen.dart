@@ -41,17 +41,14 @@ class _MyUsersState extends State<MyUsers> {
   Widget build(BuildContext context) {
     var x = MediaQuery.of(context).size.width;
 
-    return AnnotatedRegion(
-      value: SystemUiOverlayStyle(
-          statusBarColor: Colors.blue.shade100,
-          statusBarIconBrightness: Brightness.dark),
+    return SafeArea(
       child: Scaffold(
         body: Container(
           height: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/images/bg1.jpg"),
-              fit: BoxFit.cover,
+              fit: BoxFit.fitHeight,
             ),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -75,63 +72,67 @@ class _MyUsersState extends State<MyUsers> {
                       radius: x / 6,
                       child: Image.asset(
                         'assets/images/logo.png',
+                        height: 150.0,
                       ),
                     ),
                   ),
                 ),
                 // choose your role
                 const SizedBox(height: 0),
-                Align(
+                const Align(
                     alignment: Alignment.center,
                     child: Text(
                       'Choose Your Role',
                       style: TextStyle(
-                          fontSize: x * 0.06,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'fontOne'),
                     )),
                 // project manager
                 const SizedBox(height: 20.0),
-                GestureDetector(
-                  onTap: () {
-                    devValidationData().whenComplete(() async {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => pmId == ''
-                                  ? const MyPmLogin()
-                                  : const MyPmDashboard()));
-                    });
-                  },
-                  child: Card(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: x * 0.2, vertical: x * 0.03),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0)),
-                    elevation: 10.0,
-                    child: Column(
-                      children: [
-                        const SizedBox(height: 10.0),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.4,
-                          child: CircleAvatar(
-                            backgroundColor: Colors.blue.shade200,
-                            radius: 50.0,
-                            child: Lottie.asset('assets/animations/pm.json'),
+                SizedBox(
+                  child: GestureDetector(
+                    onTap: () {
+                      devValidationData().whenComplete(() async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => pmId == ''
+                                    ? const MyPmLogin()
+                                    : const MyPmDashboard()));
+                      });
+                    },
+                    child: Card(
+                      margin: EdgeInsets.symmetric(
+                          horizontal: x * 0.2, vertical: x * 0.03),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0)),
+                      elevation: 3.0,
+                      color: const Color.fromARGB(255, 243, 199, 173),
+                      child: Column(
+                        children: [
+                          const SizedBox(height: 10.0),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.4,
+                            child: CircleAvatar(
+                              backgroundColor: const Color(0xfff8decf),
+                              radius: 50.0,
+                              child: Lottie.asset('assets/animations/pm.json'),
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0),
-                          child: Text(
-                            'Project Manager',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: x * 0.045,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'fontTwo'),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 8.0),
+                            child: Text(
+                              'Project Manager',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'fontTwo'),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -155,14 +156,15 @@ class _MyUsersState extends State<MyUsers> {
                         horizontal: x * 0.2, vertical: x * 0.03),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0)),
-                    elevation: 10.0,
+                    elevation: 3.0,
+                    color: const Color.fromARGB(255, 243, 199, 173),
                     child: Column(
                       children: [
                         const SizedBox(height: 10.0),
                         SizedBox(
                           width: MediaQuery.of(context).size.width * 0.4,
                           child: CircleAvatar(
-                            backgroundColor: Colors.blue.shade200,
+                            backgroundColor: const Color(0xfff8decf),
                             radius: 50.0,
                             child:
                                 Lottie.asset('assets/animations/client.json'),
@@ -201,14 +203,15 @@ class _MyUsersState extends State<MyUsers> {
                         horizontal: x * 0.2, vertical: x * 0.03),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0)),
-                    elevation: 10.0,
+                    elevation: 3.0,
+                    color: const Color.fromARGB(255, 243, 199, 173),
                     child: Column(
                       children: [
                         const SizedBox(height: 10.0),
                         SizedBox(
                           width: MediaQuery.of(context).size.width * 0.4,
                           child: CircleAvatar(
-                            backgroundColor: Colors.blue.shade200,
+                            backgroundColor: const Color(0xfff8decf),
                             radius: 50.0,
                             child: Lottie.asset('assets/animations/dev.json'),
                           ),

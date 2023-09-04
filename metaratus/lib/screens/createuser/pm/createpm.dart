@@ -59,7 +59,7 @@ class _MyNewPmState extends State<MyNewPm> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue.shade50,
+          backgroundColor: Colors.amber.shade50,
           centerTitle: true,
           title: const Text(
             'Create Project Manager',
@@ -73,7 +73,7 @@ class _MyNewPmState extends State<MyNewPm> {
             ? Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 decoration: BoxDecoration(
-                  color: Colors.blue.shade50,
+                  color: Colors.amber.shade50,
                 ),
                 child: SingleChildScrollView(
                   child: Column(
@@ -185,7 +185,7 @@ class _MyNewPmState extends State<MyNewPm> {
                             },
                             style: const ButtonStyle(
                               backgroundColor:
-                                  MaterialStatePropertyAll(Colors.indigo),
+                                  MaterialStatePropertyAll(Colors.green),
                             ),
                             child: const Text(
                               'save',

@@ -39,7 +39,7 @@ class _MyDevProjectDetailsState extends State<MyDevProjectDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade50,
+        backgroundColor: Colors.amber.shade50,
         title: const Text(
           'Your Project List',
           style: TextStyle(
@@ -54,7 +54,7 @@ class _MyDevProjectDetailsState extends State<MyDevProjectDetails> {
           gradient: LinearGradient(
             colors: [
               Colors.white,
-              Colors.lightBlue.shade50,
+              Colors.amber.shade50,
             ],
             begin: Alignment.bottomCenter,
             end: Alignment.topRight,
@@ -185,7 +185,7 @@ class _MyDevProjectDetailsState extends State<MyDevProjectDetails> {
                                       ],
                                     ),
                                     child: Card(
-                                        color: Colors.blue.shade100,
+                                        color: Colors.amber.shade100,
                                         elevation: 0,
                                         child: Container(
                                           padding: const EdgeInsets.symmetric(
@@ -268,37 +268,37 @@ class _MyDevProjectDetailsState extends State<MyDevProjectDetails> {
                                                         FontWeight.bold),
                                               ),
                                               const SizedBox(height: 10.0),
-                                              ElevatedButton(
-                                                onPressed: () {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          AuthQuestionaire(
-                                                        developerIdTemp:
-                                                            data[index]
-                                                                ['proj_cli_id'],
-                                                      ),
-                                                    ),
-                                                  );
-                                                  // Navigator.push(
-                                                  //   context,
-                                                  //   MaterialPageRoute(
-                                                  //     builder: (context) =>
-                                                  //         QuestionDev(
-                                                  //       id: data[index]
-                                                  //           ['proj_cli_id'],
-                                                  //     ),
-                                                  //   ),
-                                                  // );
-                                                },
-                                                child: const Text(
-                                                  'View questionnaire',
-                                                  style: TextStyle(
-                                                      color: Colors.black87,
-                                                      fontSize: 14.0),
-                                                ),
-                                              ),
+                                              // ElevatedButton(
+                                              //   onPressed: () {
+                                              //     Navigator.push(
+                                              //       context,
+                                              //       MaterialPageRoute(
+                                              //         builder: (context) =>
+                                              //             AuthQuestionaire(
+                                              //           developerIdTemp:
+                                              //               data[index]
+                                              //                   ['proj_cli_id'],
+                                              //         ),
+                                              //       ),
+                                              //     );
+                                              //     // Navigator.push(
+                                              //     //   context,
+                                              //     //   MaterialPageRoute(
+                                              //     //     builder: (context) =>
+                                              //     //         QuestionDev(
+                                              //     //       id: data[index]
+                                              //     //           ['proj_cli_id'],
+                                              //     //     ),
+                                              //     //   ),
+                                              //     // );
+                                              //   },
+                                              //   child: const Text(
+                                              //     'View questionnaire',
+                                              //     style: TextStyle(
+                                              //         color: Colors.black87,
+                                              //         fontSize: 14.0),
+                                              //   ),
+                                              // ),
                                             ],
                                           ),
                                         )),
